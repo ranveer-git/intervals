@@ -17,7 +17,9 @@ public class App {
 
       };
       IntervalsHolder intervals = new IntervalsHolderImpl(intervalList);
-      intervals.isActiveOnDay(LocalDate.of(2021, 1, 25));
+      System.out.println("ActiveOn2021/01/25=>"+intervals.isActiveOnDay(LocalDate.of(2021, 1, 25)));
+      System.out.println("PortitionOfDay 2021/01/25=>"+intervals.getCoveredPortionOfDay(LocalDate.of(2021, 1, 25)));
+      System.out.println("PortitionFromDay 2020/01/25=>"+intervals.getCoveredPortionFromDate(LocalDate.of(2020, 1, 25)));
       System.out.println(intervals);
     } catch (Exception e) {
       e.printStackTrace();
